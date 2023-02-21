@@ -23,14 +23,31 @@ window.addEventListener("scroll", function () {
         }
         if (scrolled >= "99.9") {
             timeScrolled = new Date() - startTime;
-            console.log(timeScrolled);
-            shoot();
-            console.log("reset time");
-            setTimeout(() => {
-                lastScrolled = -1;
-                startTiming = true;
-                console.log("end of reset");
-            }, 3000);
+            score = (((100 - startPosition) * 10) / timeScrolled) * 500;
+            if (score > 0) {
+                console.log("=>", score);
+
+                ball.style.transform = `translate(-50%, -50%) translate(${score}px ,0px)`;
+                setTimeout(() => {
+                    ball.style.transform =
+                        "translate(-50%, -50%) translate(0px ,0px)";
+                }, 1500);
+
+                console.log("reset time");
+                setTimeout(() => {
+                    lastScrolled = -1;
+                    startTiming = true;
+                    console.log("end of reset");
+                }, 2000);
+                window.scrollTo({
+                    top:
+                        Math.random() *
+                            document.documentElement.scrollHeight *
+                            0.8 +
+                        0.1 * document.documentElement.clientHeight,
+                    behavior: "smooth",
+                });
+            }
         }
         lastScrolled = scrolled;
     } else {
@@ -39,11 +56,11 @@ window.addEventListener("scroll", function () {
     leg.style.transform = `translate(-50%, -50%) rotate(-${scrolled * 1.3}deg)`;
 });
 
-function shoot() {
-    score = ((100 - startPosition)*10 / timeScrolled) * 500;
-    console.log("=>", score);
-    ball.style.transform = `translate(-50%, -50%) translate(${score}px ,0px)`;
-    setTimeout(() => {
-        ball.style.transform = "translate(-50%, -50%) translate(0px ,0px)";
-    }, 2500);
-}
+// function shoot() {
+//     score = (((100 - startPosition) * 10) / timeScrolled) * 500;
+//     console.log("=>", score);
+//     ball.style.transform = `translate(-50%, -50%) translate(${score}px ,0px)`;
+//     setTimeout(() => {
+//         ball.style.transform = "translate(-50%, -50%) translate(0px ,0px)";
+//     }, 2500);
+// }
