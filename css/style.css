@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  height: 5000px;
+}
+
+.game-box div {
+  background-repeat: no-repeat;
+  position: fixed;
+}
+.game-box__sticky-man {
+  background: url("../img/sticky-man.png") left/cover;
+  background-size: 720px;
+  width: 900px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid pink;
+}
+.game-box__sticky-man-leg {
+  background: url("../img/leg.png") 20px 50px;
+  background-size: 188px;
+  width: 375px;
+  height: 170px;
+  top: calc(50% + 110px);
+  left: calc(50% - 215px);
+  transform: translate(-50%, -50%) rotate(0deg);
+  border: 2px solid rgb(142, 0, 24);
+}/*# sourceMappingURL=style.css.map */

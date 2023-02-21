@@ -1,4 +1,4 @@
-const leg = document.getElementById("leg");
+const leg = document.querySelector(".game-box__sticky-man-leg");
 
 let scrolled = 0;
 let lastScrolled = -1;
@@ -20,7 +20,7 @@ window.addEventListener("scroll", function () {
             console.log(new Date() - startTime);
             console.log("reset time");
             setTimeout(() => {
-                lastScrolled = 0;
+                lastScrolled = -1;
                 startTiming = true;
                 console.log("end of reset");
             }, 5000);
