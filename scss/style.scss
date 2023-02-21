@@ -27,4 +27,16 @@
         transform: translate(-50%, -50%) rotate(-0deg);
         border: 2px solid rgb(142, 0, 24);
     }
+
+    &__ball {
+        background: url("../img/ball.png");
+        background-size: 90px;
+        width: 90px;
+        height: 90px;
+        top: calc(50% + 220px);
+        left: calc(50% - 85px);
+        transform: translate(-50%, -50%);
+        border: 2px solid rgb(0, 142, 26);
+        transition: transform 0.5s;
+    }
 }
