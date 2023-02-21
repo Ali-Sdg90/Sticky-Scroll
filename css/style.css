@@ -5,13 +5,49 @@
 }
 
 body {
-  background: #333;
+  background: linear-gradient(to top, rgba(175, 25, 25, 0.707), rgba(25, 25, 175, 0.707));
   height: 5000px;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 30px;
+}
+
+::-webkit-scrollbar {
+  background: rgb(41, 41, 41);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.674);
+  height: 100px;
+  border-radius: 10px;
+  outline: 3px solid rgb(41, 41, 41);
+  outline-offset: -3px;
+  transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.927);
 }
 
 .game-box div {
   background-repeat: no-repeat;
   position: fixed;
+}
+.game-box__background {
+  background: url("../img/background.png") -290px -50px;
+  background-size: 2000px;
+  width: 1536px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .game-box__sticky-man {
   background: url("../img/sticky-man.png") left/cover;
@@ -21,7 +57,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid pink;
 }
 .game-box__sticky-man-leg {
   background: url("../img/leg.png") 20px 50px;
@@ -31,7 +66,6 @@ body {
   top: calc(50% + 110px);
   left: calc(50% - 215px);
   transform: translate(-50%, -50%) rotate(0deg);
-  border: 2px solid rgb(142, 0, 24);
 }
 .game-box__ball {
   background: url("../img/ball.png");
@@ -41,6 +75,5 @@ body {
   top: calc(50% + 220px);
   left: calc(50% - 85px);
   transform: translate(-50%, -50%);
-  border: 2px solid rgb(0, 142, 26);
   transition: transform 0.5s;
 }/*# sourceMappingURL=style.css.map */

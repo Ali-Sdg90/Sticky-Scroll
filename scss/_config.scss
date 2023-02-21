@@ -3,7 +3,36 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
-    background: #333;
+    background: linear-gradient(
+        to top,
+        rgba(175, 25, 25, 0.707),
+        rgba(25, 25, 175, 0.707)
+    );
     height: 5000px;
+}
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 30px;
+}
+
+::-webkit-scrollbar {
+    background: rgb(41, 41, 41);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.674);
+    height: 100px;
+    border-radius: 10px;
+    outline: 3px solid rgb(41, 41, 41);
+    outline-offset: -3px;
+    transition: 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.927);
 }
