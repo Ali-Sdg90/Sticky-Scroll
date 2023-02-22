@@ -15,7 +15,7 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-  width: 30px;
+  width: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -24,16 +24,15 @@ h1 {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.674);
-  height: 100px;
   border-radius: 10px;
-  outline: 3px solid rgb(41, 41, 41);
-  outline-offset: -3px;
-  transition: 0.5s;
+  outline: 5px solid rgb(41, 41, 41);
+  outline-offset: -4.7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  transition: 0.5s;
   background: rgba(255, 255, 255, 0.927);
+  outline-offset: -3.7px;
+  outline-width: 4px;
 }
 
 .game-box div {
@@ -76,4 +75,36 @@ h1 {
   left: calc(50% - 85px);
   transform: translate(-50%, -50%);
   transition: transform 0.5s;
+}
+
+.scores {
+  box-shadow: 0 0 5px rgba(0, 21, 255, 0.325);
+  background: rgba(255, 68, 252, 0.322);
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.scores form {
+  font-size: 20px;
+  margin: 5px 0;
+  width: 290px;
+  font-weight: 900;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+.scores input {
+  width: 135px;
+  border: 1px solid blue;
+  border-radius: 3px;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  font-size: 20px;
+  transform: translate(0px, -3px);
+  padding-left: 15px;
+  letter-spacing: 1px;
 }/*# sourceMappingURL=style.css.map */

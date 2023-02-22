@@ -8,14 +8,35 @@
         <title>Scroll-based Animation</title>
     </head>
     <body>
-        <h1>Scroll down or press end</h1>
+        <h1>Scroll down or press end key</h1>
         <div class="game-box">
             <div class="game-box__background"></div>
             <div class="game-box__sticky-man"></div>
             <div class="game-box__sticky-man-leg"></div>
             <div class="game-box__ball"></div>
         </div>
-        <!-- <div class="reset-game">Reset</div> -->
+        <div class="scores">
+            <form>
+                <label for="scores__highest">Highest   score :</label>
+                <input
+                    type="number"
+                    name="scores__highest"
+                    id="scores__highest"
+                    value="0"
+                    disabled
+                />
+            </form>
+            <form>
+                <label for="scores__current">Current score :</label>
+                <input
+                    type="number"
+                    name="scores__current"
+                    id="scores__current"
+                    value="0"
+                    disabled
+                />
+            </form>
+        </div>
         <script src="js/script.js"></script>
     </body>
 </html>

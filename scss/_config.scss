@@ -12,27 +12,26 @@ body {
     );
     height: 5000px;
 }
+
 h1 {
     text-align: center;
     margin: 10px;
 }
 
 ::-webkit-scrollbar {
-    width: 30px;
+    width: 20px;
 }
-
 ::-webkit-scrollbar {
     background: rgb(41, 41, 41);
 }
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.674);
-    height: 100px;
     border-radius: 10px;
-    outline: 3px solid rgb(41, 41, 41);
-    outline-offset: -3px;
-    transition: 0.5s;
+    outline: 5px solid rgb(41, 41, 41);
+    outline-offset: -4.7px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    transition: 0.5s;
     background: rgba(255, 255, 255, 0.927);
+    outline-offset: -3.7px;
+    outline-width: 4px;
 }

@@ -53,3 +53,36 @@
         transition: transform 0.5s;
     }
 }
+.scores {
+    box-shadow: 0 0 5px rgba(0, 21, 255, 0.325);
+    background: rgba(255, 68, 252, 0.322);
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    form {
+        font-size: 20px;
+        margin: 5px 0;
+        width: 290px;
+        font-weight: 900;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    input {
+        width: 135px;
+        border: 1px solid blue;
+        border-radius: 3px;
+        text-align: center;
+        color: black;
+        font-weight: 900;
+        font-size: 20px;
+        transform: translate(0px, -3px);
+        padding-left: 15px;
+        letter-spacing: 1px;
+    }
+}
