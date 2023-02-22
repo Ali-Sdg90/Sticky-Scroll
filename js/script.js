@@ -1,16 +1,17 @@
 const leg = document.querySelector(".game-box__sticky-man-leg");
-const ball = document.querySelector(".game-box__ball");
-const highScore = document.getElementById("scores__highest");
 const currentScore = document.getElementById("scores__current");
+const highScore = document.getElementById("scores__highest");
 const saveHighest = localStorage.getItem("stickManHighest");
+const ball = document.querySelector(".game-box__ball");
+// localStorage.clear();
 
-let scrolled = 0;
-let lastScrolled = -1;
 let startPosition = -1;
 let startTiming = true;
-let startTime = 0;
-let score = 0;
 let highScoreValue = 0;
+let lastScrolled = -1;
+let startTime = 0;
+let scrolled = 0;
+let score = 0;
 
 if (saveHighest) {
     highScore.value = saveHighest;
@@ -26,16 +27,19 @@ window.addEventListener("scroll", function () {
     if (lastScrolled < scrolled) {
         if (startTiming) {
             console.log("Count");
-            startTime = Date.parse(new Date());
+            startTime = Date.now();
             startPosition = scrolled;
             startTiming = false;
         }
 
         if (scrolled >= 99.9) {
             score = (
-                (((100 - startPosition) * 10) / (new Date() - startTime)) *
-                500
+                ((100 - startPosition) *
+                    10 *
+                    (1000 / (Date.now() - startTime))) /
+                5
             ).toFixed(2);
+
             if (score > 0) {
                 console.log("=>", score);
 
@@ -52,14 +56,7 @@ window.addEventListener("scroll", function () {
                     console.log("end of reset");
                 }, 1500);
                 currentScore.value = score;
-                console.log(
-                    score > highScoreValue,
-                    score,
-                    ">",
-                    highScoreValue,
-                    typeof score,
-                    typeof highScoreValue
-                );
+
                 if (Number(score) > Number(highScoreValue)) {
                     highScoreValue = score;
                     highScore.value = score;
@@ -81,4 +78,3 @@ window.addEventListener("scroll", function () {
     }
     leg.style.transform = `translate(-50%, -50%) rotate(-${scrolled * 1.3}deg)`;
 });
-// localStorage.clear();
