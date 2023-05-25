@@ -4,6 +4,9 @@
     objective of the game is to scroll down as fast as you can and score the
     highest points.
 </p>
+
+![2023-05-25 13-39-04](https://github.com/Ali-Sdg90/Sticky-Scroll/assets/115698554/8de3dac7-4636-4c9b-9e8c-4d24b2f1d3fc)
+
 <h2>Features</h2>
 <ul>
     <li>Easy to play</li>
